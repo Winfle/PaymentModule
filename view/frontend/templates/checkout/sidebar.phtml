@@ -1,0 +1,32 @@
+<?php
+/** @var \Payment\Checkout\Block\Checkout\Sidebar $block */
+?>
+<div class="payment-checkout-review" id="payment-checkout-review">
+    <div class="payment-checkout-cart payment-checkout-section" id="payment-checkout-cart">
+        <div class="payment-checkout-section-content" data-role="content" aria-labelledby="payment-checkout-cart-heading">
+            <?= $block->getChildHtml('cart'); ?>
+        </div>
+    </div>
+</div>
+
+<span class="please-wait load indicator" id="review-please-wait" style="display: none;"
+      data-text="<?= $block->escapeHtml(__('Submitting order information...')); ?>">
+    <span><?= $block->escapeHtml(__('Submitting order information...')); ?></span>
+</span>
+
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Ui/js/core/app": {
+                "components": {
+                    "paymentCheckout": {
+                        "component": "paymentCheckout",
+                        "config": {
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+</script>

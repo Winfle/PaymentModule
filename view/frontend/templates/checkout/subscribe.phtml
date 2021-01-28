@@ -1,0 +1,10 @@
+<div id="payment-checkout_newsletter" class="payment-checkout-block newsletter">
+    <form method="post" action="<?php echo $block->getNewsletterSubmitUrl(); ?>"
+          id="payment-checkout-newsletter-form">
+        <div class="fieldset comment">
+            <input type="checkbox" name="newsletter" value="1" checked="checked"
+                   id="newsletter" title="<?php echo __('Sign Up for Our Newsletter') ?>" class="checkbox"/>
+            <label for="newsletter"><span class="tick"></span> <?php echo __('Sign Up for Our Newsletter') ?></label>
+        </div>
+    </form>
+</div>

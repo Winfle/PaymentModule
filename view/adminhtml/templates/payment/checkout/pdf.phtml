@@ -1,0 +1,7 @@
+<?php
+/**
+ * @var $block \Payment\Checkout\Block\Adminhtml\Payment\Checkout\Info
+ */
+?>
+<?= $block->escapeHtml(__('Payment Checkout Order ID: %1', $block->getInfo()->getAdditionalInformation('payment_checkout_id'))) ?>
+    {{pdf_row_separator}}
